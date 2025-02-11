@@ -1,4 +1,4 @@
-# disaster-alert-backend
+# disaster-alert-and-evcuation
 Disaster Alert & Evacuation Guide
 
 🌍 Overview
