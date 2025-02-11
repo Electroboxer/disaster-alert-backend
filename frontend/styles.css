@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ff5722;
+    color: white;
+    padding: 15px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#alerts-container {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#map {
+    height: 400px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}

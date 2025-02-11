@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Alert & Evacuation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Alert & Evacuation Guide</h1>
+    </header>
+
+    <nav>
+        <button onclick="fetchEarthquakes()">Earthquakes</button>
+        <button onclick="fetchWeather()">Weather</button>
+        <button onclick="fetchWildfires()">Wildfires</button>
+        <button onclick="fetchSurvivalTips()">Survival Tips</button>
+        <button onclick="fetchShelters()">Shelter Locations</button>
+    </nav>
+
+    <section id="alerts">
+        <h2>Disaster Alerts</h2>
+        <div id="alerts-container">Click a button to see alerts</div>
+    </section>
+
+    <section id="map-section">
+        <h2>Disaster Map</h2>
+        <div id="map"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
