@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        #map { height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([20.5937, 78.9629], 5); // Default location: India
+
+        // OpenStreetMap Tile Layer (cached for offline use)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Get user location
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                var userLocation = [position.coords.latitude, position.coords.longitude];
+                map.setView(userLocation, 12);
+                L.marker(userLocation).addTo(map).bindPopup("You are here").openPopup();
+            });
+        }
+    </script>
+</body>
+</html>
